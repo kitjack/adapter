@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InstagramCaptionGenerator from '../../components/InstagramCaptionGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="Instagram Caption Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-pink-50 to-orange-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Instagram Caption Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Create engaging Instagram captions that capture attention and drive engagement. Generate multiple variations with different tones and styles.
+      </p>
+    </div>
+    <InstagramCaptionGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Instantly Create Captions That Boost Engagement</h2>
+        <p class="text-lg mb-6">Struggling to find the perfect words for your Instagram posts? Our Instagram Caption Generator makes it easy to create engaging, scroll-stopping captions that match your photos, videos, and reels—fast, free, and without any limits.</p>
+        
+        <p class="text-lg mb-8">Powered by the latest GPT-4o AI technology, this Instagram Caption Generator helps you craft captions that capture attention, tell your story, and drive more likes, comments, and shares. Whether you're posting travel photos, food snaps, lifestyle shots, or brand promotions, our generator delivers captions that truly connect with your audience.</p>
+        
+        <p class="text-lg mb-8">And the best part? It's 100% free — no account, no subscription, no restrictions.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Use the Instagram Caption Generator</h2>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Describe Your Image</span>
+            <p>Tell us about your photo: What's happening in the image? What colors, setting, or emotions are involved? A few specific details will help the AI create a perfect matching caption.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Choose Your Caption Style</span>
+            <p>Pick the vibe you want: fun, professional, casual, motivational, or artistic. Our generator adapts to your brand voice or the mood you're aiming for.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Add Optional Customizations</span>
+            <p>You can also specify hashtags you'd like included or define your target audience for even more tailored results.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Generate, Personalize, and Post</span>
+            <p>Click "Generate" and get a ready-to-use caption. Feel free to tweak it, add emojis, or personalize it further—then simply copy and paste it to Instagram.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why a Great Instagram Caption Matters</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Boost Engagement</h3>
+            <p>Captivating captions prompt users to like, comment, and share, naturally expanding your post's reach across Instagram.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Strengthen Your Brand Voice</h3>
+            <p>Consistent, high-quality captions help you build a recognizable tone and brand personality that followers trust and engage with.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Tell a Story</h3>
+            <p>Photos grab attention, but captions tell the story behind the image. They create deeper emotional connections with your audience.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Drive Traffic and Sales</h3>
+            <p>Strategically placed calls-to-action in your captions can funnel followers toward your products, services, or website.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Who Should Use the Instagram Caption Generator?</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">Content Creators:</span> Keep your feed fresh with daily caption ideas that maintain engagement.</li>
+          <li class="text-lg"><span class="font-semibold">Small Business Owners:</span> Craft professional captions that drive brand awareness and highlight your offerings.</li>
+          <li class="text-lg"><span class="font-semibold">Social Media Managers:</span> Generate caption batches quickly for client approval and scheduling.</li>
+          <li class="text-lg"><span class="font-semibold">Influencers:</span> Create engaging captions that encourage audience interaction and grow your following.</li>
+          <li class="text-lg"><span class="font-semibold">Travel Enthusiasts:</span> Perfectly capture your adventures with vivid, memorable captions.</li>
+          <li class="text-lg"><span class="font-semibold">Everyday Instagram Users:</span> Make your posts more lively, personal, and impactful with minimal effort.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Instagram Caption Optimization Tips</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Issue</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Solution</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Caption feels generic</td>
+                <td class="py-3 px-4 text-gray-700">Add more specific image details like colors, settings, emotions, and context.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Need more personality</td>
+                <td class="py-3 px-4 text-gray-700">Select a different caption style or specify your target audience more clearly.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Want a more vibrant caption</td>
+                <td class="py-3 px-4 text-gray-700">Add emojis, playful language, or calls-to-action after generation for extra flair.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the Instagram Caption Generator really free?</h3>
+            <p>Yes! There are no hidden costs, subscriptions, or paywalls. Unlimited caption generation at no cost.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Do I need to create an account?</h3>
+            <p>No registration required. Simply access the tool and start generating captions immediately.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How many captions can I create?</h3>
+            <p>You can generate unlimited captions—perfect for content planning or spontaneous posting.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I modify the captions after generation?</h3>
+            <p>Absolutely! Personal touches are encouraged to make each caption truly yours.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will the generated captions include hashtags?</h3>
+            <p>If you provide hashtags during input, they will be included. You can also easily add more afterward.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Does it work for all Instagram formats?</h3>
+            <p>Yes! Whether you're posting photos, reels, carousels, or even stories, the Instagram Caption Generator creates captions optimized for any format.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is my data private?</h3>
+            <p>Completely. We don't store your image descriptions or generated captions after your session ends, keeping your content ideas secure.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choose aiFreeForever's Instagram Caption Generator?</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever (2025)</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Later</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Hootsuite</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Planoly</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">Always Free</td>
+                <td class="py-3 px-4 text-gray-700">$15–$40/month</td>
+                <td class="py-3 px-4 text-gray-700">$49–$739/month</td>
+                <td class="py-3 px-4 text-gray-700">$11–$23/month</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o (Latest)</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI (Older Models)</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI (Older Models)</td>
+                <td class="py-3 px-4 text-gray-700">Limited AI (Varies)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Account Required</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Caption Style/Tone Options</td>
+                <td class="py-3 px-4 text-gray-700">Multiple styles available</td>
+                <td class="py-3 px-4 text-gray-700">Basic options</td>
+                <td class="py-3 px-4 text-gray-700">Basic options</td>
+                <td class="py-3 px-4 text-gray-700">Basic tone settings</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Hashtag Support</td>
+                <td class="py-3 px-4 text-gray-700">Smart matching optional</td>
+                <td class="py-3 px-4 text-gray-700">Manual input required</td>
+                <td class="py-3 px-4 text-gray-700">Manual input required</td>
+                <td class="py-3 px-4 text-gray-700">Limited automatic tags</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Emoji Suggestions</td>
+                <td class="py-3 px-4 text-gray-700">Easy to add manually</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="instagram-caption" category="social-media" client:load />
+  </main>
+</Layout>

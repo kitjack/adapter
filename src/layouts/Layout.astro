@@ -1,0 +1,57 @@
+---
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import '@fontsource-variable/inter';
+
+interface Props {
+  title?: string;
+}
+
+const { title = "AI-Free-Forever - Free AI Tools" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white antialiased">
+    <Navigation client:load />
+    <slot />
+    <Footer client:load />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --font-inter: 'Inter Variable', system-ui, sans-serif;
+  }
+  html {
+    font-family: var(--font-inter);
+    background-size: 224px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+</style>
+
+<script>
+  import Lenis from '@studio-freight/lenis';
+
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: 'vertical',
+    smoothWheel: true,
+  });
+
+  function raf(time: number) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>

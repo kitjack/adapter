@@ -1,0 +1,905 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="min-h-screen">
+    {/* Hero Section */}
+    <div class="relative overflow-hidden">
+      {/* Background Elements */}
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-50/80 to-white/20 pointer-events-none"></div>
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-astro-blue/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container relative mx-auto px-4 py-24 md:py-32">
+        <div class="max-w-4xl mx-auto">
+          {/* Main Content */}
+          <div class="text-center mb-16">
+            <div class="inline-block animate-float">
+              <div class="flex items-center gap-2 text-sm bg-white border border-gray-200 rounded-full pl-2 pr-4 py-1 mb-8 text-gray-600">
+                <span class="flex h-6 w-6 items-center justify-center rounded-full bg-astro-blue/10 text-astro-blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                <span>100% Free Forever</span>
+              </div>
+            </div>
+
+            <h1 class="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+              <span class="text-gray-900 inline-block">Unlimited words.</span><br/>
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-orange-600 inline-block">100% Free AI tools</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-4 max-w-2xl mx-auto">
+              Break free from word limits, subscriptions, and restrictions.
+            </p>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+              Access powerful AI tools with no constraints, forever.
+            </p>
+
+            {/* Search Bar */}
+            <div class="max-w-2xl mx-auto mb-12 relative group">
+              <div class="absolute inset-0 bg-gradient-to-r from-astro-blue to-orange-500 rounded-xl blur-lg opacity-30 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  placeholder="Search AI tools..." 
+                  class="w-full p-4 pl-12 bg-white border border-gray-200 rounded-xl focus:border-astro-blue focus:ring-2 focus:ring-astro-blue/20 transition shadow-sm"
+                />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-astro-blue to-astro-blue/80 text-white rounded-lg hover:opacity-90 transition shadow-sm">
+                  Search
+                </button>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div class="flex flex-wrap justify-center gap-6">
+              {['No word limits', 'No credit card', 'No registration required', 'Free forever'].map((feature) => (
+                <div class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-astro-blue" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-700">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Tools Section */}
+    <div class="bg-gray-50 py-24">
+      <div class="container mx-auto px-4">
+        {/* Social Media AI Tools */}
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Social Media AI Tools</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* YouTube Description Generator Card */}
+            <a href="/tools/youtube-description" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-red-500 transition-colors duration-300">YouTube Description Generator</h3>
+                    <p class="text-gray-600">Create engaging, SEO-optimized YouTube video descriptions with AI. Boost your video's visibility and engagement.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-red-500">
+                      <span class="text-sm font-medium">Try it now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Instagram Caption Generator Card */}
+            <a href="/tools/instagram-caption" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-orange-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 via-pink-600 to-orange-400 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-pink-500 transition-colors duration-300">Instagram Caption Generator</h3>
+                    <p class="text-gray-600">Create engaging Instagram captions that capture attention and drive engagement. Generate multiple variations with different tones.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-pink-500">
+                      <span class="text-sm font-medium">Try it now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* LinkedIn Post Generator Card */}
+            <a href="/tools/linkedin-post" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-blue-500 transition-colors duration-300">LinkedIn Post Generator</h3>
+                    <p class="text-gray-600">Create professional and engaging LinkedIn posts that showcase your expertise and drive meaningful engagement.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-blue-500">
+                      <span class="text-sm font-medium">Try it now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Twitter Thread Generator Card */}
+            <a href="/tools/twitter-thread" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-sky-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-sky-500 transition-colors duration-300">Twitter Thread Generator</h3>
+                    <p class="text-gray-600">Create engaging Twitter threads that captivate your audience. Generate multiple variations with customizable options.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-sky-500">
+                      <span class="text-sm font-medium">Try it now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Facebook Post Generator Card */}
+            <a href="/tools/facebook-post" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-facebook/5 to-facebook/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-facebook rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-facebook transition-colors duration-300">Facebook Post Generator</h3>
+                    <p class="text-gray-600">Create engaging Facebook posts that drive engagement and spark conversations. Generate multiple variations with different tones.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-facebook">
+                      <span class="text-sm font-medium">Try it now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* Writing AI Tools */}
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Writing AI Tools</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Long-Form Blog Post Generator Card */}
+            <a href="/tools/long-form-blog" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-violet-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-violet-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H14" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-violet-500 transition-colors duration-300">Long-Form Blog Post Generator</h3>
+                    <p class="text-gray-600">Create comprehensive, SEO-friendly blog content with custom sections. Generate engaging long-form articles that rank.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-violet-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Blog FAQ Generator Card */}
+            <a href="/tools/blog-faq" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-cyan-500 transition-colors duration-300">Blog FAQ Generator</h3>
+                    <p class="text-gray-600">Generate question-and-answer sections to boost SEO and user engagement. Create comprehensive FAQs that address user queries.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-cyan-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Product Review Generator Card */}
+            <a href="/tools/product-review" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-lime-500/5 to-lime-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-lime-500 to-lime-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-lime-500 transition-colors duration-300">Product Review Generator</h3>
+                    <p class="text-gray-600">Create balanced, informative product reviews for any item. Generate comprehensive reviews that help users make informed decisions.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-lime-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Pros and Cons Generator Card */}
+            <a href="/tools/pros-and-cons" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-rose-500/5 to-rose-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-rose-500 transition-colors duration-300">Pros and Cons Generator</h3>
+                    <p class="text-gray-600">Create balanced argument sections for blog posts and reviews. Generate comprehensive pros and cons lists for any topic.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-rose-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Listicle Generator Card */}
+            <a href="/tools/listicle" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-500/5 to-fuchsia-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-fuchsia-500 to-fuchsia-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-fuchsia-500 transition-colors duration-300">Listicle Generator</h3>
+                    <p class="text-gray-600">Create engaging, formatted list-style article content. Generate compelling listicles that capture reader attention.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-fuchsia-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Article Rewriter Card */}
+            <a href="/tools/article-rewriter" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-indigo-500 transition-colors duration-300">Article Rewriter</h3>
+                    <p class="text-gray-600">Transform existing content with fresh phrasing while preserving meaning. Generate unique variations of your articles.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-indigo-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Product Description Generator Card */}
+            <a href="/tools/product-description" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-emerald-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-emerald-500 transition-colors duration-300">Product Description Generator</h3>
+                    <p class="text-gray-600">Create compelling product descriptions that convert browsers to buyers. Generate persuasive copy that highlights key features and benefits.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-emerald-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Quora Answer Generator Card */}
+            <a href="/tools/quora-answer" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-red-500/5 to-red-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-red-500 transition-colors duration-300">Quora Answer Generator</h3>
+                    <p class="text-gray-600">Create informative, helpful answers for Quora questions. Generate well-researched responses that provide value to readers.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-red-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* Student AI Tools */}
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Student AI Tools</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Essay Outline Generator Card */}
+            <a href="/tools/essay-outline" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-teal-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-teal-500 transition-colors duration-300">Essay Outline Generator</h3>
+                    <p class="text-gray-600">Create structured essay outlines with main points and supporting details. Generate organized frameworks for your essays.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-teal-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Study Notes Summarizer Card */}
+            <a href="/tools/study-notes" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-amber-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-amber-500 transition-colors duration-300">Study Notes Summarizer</h3>
+                    <p class="text-gray-600">Transform lengthy study materials into concise, memorable notes. Generate clear summaries of complex topics.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-amber-500">
+                      <span class="text-sm font-medium">Summarize Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Project Topic Generator Card */}
+            <a href="/tools/project-topic" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-purple-500 transition-colors duration-300">Project Topic Generator</h3>
+                    <p class="text-gray-600">Discover unique project ideas for your research or assignments. Generate innovative topics across various fields.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-purple-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Math Answer Generator Card */}
+            <a href="/tools/math-answer" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-orange-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-orange-500 transition-colors duration-300">Math Answer Generator</h3>
+                    <p class="text-gray-600">Get step-by-step solutions for math problems. Generate detailed explanations for various mathematical concepts.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-orange-500">
+                      <span class="text-sm font-medium">Solve Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Literature Review Generator Card */}
+            <a href="/tools/literature-review" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-green-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-green-500 transition-colors duration-300">Literature Review Generator</h3>
+                    <p class="text-gray-600">Create comprehensive literature reviews for academic papers. Generate structured analysis of research sources.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-green-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* HR and Job Search AI Tools */}
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">HR and Job Search AI Tools</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Cover Letter AI Generator Card */}
+            <a href="/tools/cover-letter" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-blue-500 transition-colors duration-300">Cover Letter AI Generator</h3>
+                    <p class="text-gray-600">Create personalized, professional cover letters that stand out. Generate compelling letters tailored to specific job applications.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-blue-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Resume Plan Generator Card */}
+            <a href="/tools/resume-plan" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-indigo-500 transition-colors duration-300">Resume Plan Generator</h3>
+                    <p class="text-gray-600">Create structured resume outlines and content plans. Generate professional resume sections that highlight your strengths.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-indigo-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Interview Questions Generator Card */}
+            <a href="/tools/interview-questions" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-violet-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-violet-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-violet-500 transition-colors duration-300">Interview Questions Generator</h3>
+                    <p class="text-gray-600">Create relevant interview questions for any position. Generate comprehensive question sets for effective candidate evaluation.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-violet-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Recommendation Letter Generator Card */}
+            <a href="/tools/recommendation-letter" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-cyan-500 transition-colors duration-300">Recommendation Letter Generator</h3>
+                    <p class="text-gray-600">Create professional recommendation letters that highlight achievements and potential. Generate compelling endorsements.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-cyan-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Scholarship Application Letter Card */}
+            <a href="/tools/scholarship-letter" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-teal-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-teal-500 transition-colors duration-300">Scholarship Application Letter</h3>
+                    <p class="text-gray-600">Create compelling scholarship application letters that showcase your achievements and aspirations. Stand out from other applicants.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-teal-500">
+                      <span class="text-sm font-medium">Write Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* Other AI Tools */}
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Other AI Tools</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {/* Domain Generator Card */}
+            <a href="/tools/domain-generator" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-astro-blue/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-astro-blue to-orange-500 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-astro-blue transition-colors duration-300">Domain Generator</h3>
+                    <p class="text-gray-600">Generate creative and available domain names for your business using AI. Get instant suggestions that match your brand.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-astro-blue">
+                      <span class="text-sm font-medium">Try it now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Riddles Answer Generator Card */}
+            <a href="/tools/riddles-answer" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-purple-500 transition-colors duration-300">Riddles Answer Generator</h3>
+                    <p class="text-gray-600">Get answers and explanations for challenging riddles. Generate solutions with step-by-step reasoning.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-purple-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* APA Reference Generator Card */}
+            <a href="/tools/apa-reference" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-amber-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-amber-500 transition-colors duration-300">APA Reference Generator</h3>
+                    <p class="text-gray-600">Create accurate APA style references and citations. Generate properly formatted references for various source types.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-amber-500">
+                      <span class="text-sm font-medium">Generate Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            {/* Research Methodology Writer Card */}
+            <a href="/tools/research-methodology" class="group">
+              <div class="relative bg-white rounded-2xl p-6 transition duration-300 h-full overflow-hidden border border-gray-100">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-500/5 to-green-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="relative">
+                  <div class="mb-6 relative">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white transform group-hover:scale-110 transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 group-hover:text-green-500 transition-colors duration-300">Research Methodology Writer</h3>
+                    <p class="text-gray-600">Create detailed research methodology sections for your academic papers. Generate comprehensive research approaches.</p>
+                  </div>
+                  <div class="mt-6 flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-green-500">
+                      <span class="text-sm font-medium">Write Now</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs text-gray-400">Free</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+</style>

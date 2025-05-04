@@ -1,0 +1,179 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const categories = [
+  {
+    title: "Social Media Tools",
+    icon: "document",
+    tools: [
+      { name: "YouTube Description Generator", href: "/tools/youtube-description" },
+      { name: "LinkedIn Post Generator", href: "/tools/linkedin-post" },
+      { name: "Instagram Caption Generator", href: "/tools/instagram-caption" },
+      { name: "Twitter Thread Generator", href: "/tools/twitter-thread" },
+      { name: "Facebook Post Generator", href: "/tools/facebook-post" }
+    ]
+  },
+  {
+    title: "Career Tools",
+    icon: "code",
+    tools: [
+      { name: "Cover Letter Generator", href: "/tools/cover-letter" },
+      { name: "Resume Plan Generator", href: "/tools/resume-plan" },
+      { name: "Interview Questions Generator", href: "/tools/interview-questions" },
+      { name: "Recommendation Letter Generator", href: "/tools/recommendation-letter" }
+    ]
+  },
+  {
+    title: "Educational Tools",
+    icon: "book",
+    tools: [
+      { name: "Riddles Answer Generator", href: "/tools/riddles-answer" },
+      { name: "Math Answer Generator", href: "/tools/math-answer" },
+      { name: "APA Reference Generator", href: "/tools/apa-reference" },
+      { name: "Literature Review Generator", href: "/tools/literature-review" },
+      { name: "Essay Outline Generator", href: "/tools/essay-outline" },
+      { name: "Study Notes Generator", href: "/tools/study-notes" },
+      { name: "Project Topic Generator", href: "/tools/project-topic" },
+      { name: "Research Methodology Generator", href: "/tools/research-methodology" }
+    ]
+  },
+  {
+    title: "Content Tools",
+    icon: "pen",
+    tools: [
+      { name: "Long Form Blog Post Generator", href: "/tools/long-form-blog" },
+      { name: "Blog FAQ Generator", href: "/tools/blog-faq" },
+      { name: "Product Review Generator", href: "/tools/product-review" },
+      { name: "Pros and Cons Generator", href: "/tools/pros-and-cons" },
+      { name: "Listicle Generator", href: "/tools/listicle" },
+      { name: "Article Rewriter", href: "/tools/article-rewriter" },
+      { name: "Product Description Generator", href: "/tools/product-description" },
+      { name: "Quora Answer Generator", href: "/tools/quora-answer" }
+    ]
+  },
+  {
+    title: "Etsy Seller Tools",
+    icon: "shop",
+    tools: [
+      { name: "Etsy Product Description Generator", href: "/tools/etsy-product-description" },
+      { name: "Etsy Tag Generator", href: "/tools/etsy-tag-generator" },
+      { name: "Etsy Shop Name Generator", href: "/tools/etsy-shop-name-generator" },
+      { name: "Etsy Title Generator", href: "/tools/etsy-title-generator" },
+      { name: "Etsy Keyword Generator", href: "/tools/etsy-keyword-generator" },
+      { name: "Etsy Shop Description Generator", href: "/tools/etsy-shop-description-generator" }
+    ]
+  },
+  {
+    title: "YouTube Tools",
+    icon: "youtube",
+    tools: [
+      { name: "YouTube Description Generator", href: "/tools/youtube-description" },
+      { name: "YouTube Tag Generator", href: "/tools/youtube-tag-generator" },
+      { name: "YouTube Title Generator", href: "/tools/youtube-title-generator" },
+      { name: "YouTube Thumbnail Generator", href: "/tools/youtube-thumbnail-generator" },
+      { name: "YouTube Script Generator", href: "/tools/youtube-script-generator" },
+      { name: "YouTube Caption Extractor", href: "/tools/youtube-caption-extractor" },
+      { name: "YouTube to Blog Generator", href: "/tools/youtube-to-blog-generator" }
+    ]
+  }
+];
+
+const features = [
+  "Completely free to use with no word limits",
+  "Powered by the latest GPT-4o model",
+  "No sign-up or credit card required",
+  "High-quality outputs for professional use",
+  "Regular updates with new tools and improvements"
+];
+---
+
+<Layout title="AI Tools - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        AI Tools Collection
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Explore our comprehensive collection of AI-powered tools for content creation, social media, education, and more.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      {categories.map(category => (
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-500">
+              {category.icon === 'document' && (
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              )}
+              {category.icon === 'code' && (
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              )}
+              {category.icon === 'book' && (
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              )}
+              {category.icon === 'pen' && (
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+              )}
+              {category.icon === 'shop' && (
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              )}
+              {category.icon === 'youtube' && (
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              )}
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-900">{category.title}</h2>
+          </div>
+          <div class="space-y-3">
+            {category.tools.map(tool => (
+              <a 
+                href={tool.href}
+                class="block p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition"
+              >
+                <span class="text-gray-900">{tool.name}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        Unlimited AI Tools at Your Fingertips
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+        All our AI tools are powered by state-of-the-art AI models, including GPT-4o. Unlike other platforms, 
+        we offer unlimited usage with no word limits or hidden fees. Simply choose a tool and start creating 
+        without restrictions.
+      </p>
+
+      <h3 class="text-2xl font-bold text-gray-900 mb-8">Why Our AI Tools?</h3>
+      <div class="max-w-2xl mx-auto">
+        <ul class="space-y-4">
+          {features.map(feature => (
+            <li class="flex items-center gap-3 text-gray-700">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,193 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LiteratureReviewGenerator from '../../components/LiteratureReviewGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="AI Literature Review Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        AI Literature Review Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Create comprehensive literature reviews with proper citations and analysis. Generate structured academic reviews.
+      </p>
+    </div>
+    <LiteratureReviewGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Instantly Create Comprehensive, Polished Reviews</h2>
+        <p class="text-lg mb-6">Struggling to organize and analyze research for your academic writing? Our AI Literature Review Generator helps you transform your research topic into a complete, professionally structured literature review—all in just minutes.</p>
+        
+        <p class="text-lg mb-8">Powered by the latest GPT-4o AI model, the AI Literature Review Generator compiles key research findings, analyzes major themes, identifies gaps in the literature, and structures everything into a polished review. Best of all, it's completely free—no subscriptions, no word limits, and no hidden fees.</p>
+        
+        <p class="text-lg mb-8">Whether you're writing a dissertation, thesis, research paper, or journal article, our tool helps you quickly generate a comprehensive review that aligns with academic standards and impresses supervisors and editors alike.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Use the AI Literature Review Generator</h2>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Enter Your Research Topic</span>
+            <p>Clearly specify the focus of your literature review for the most targeted and relevant content.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Specify Word Count and Academic Level</span>
+            <p>Choose your preferred length (short, medium, or long) and select your academic level (undergraduate, graduate, doctoral) for appropriate complexity and depth.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Add Optional Details</span>
+            <p>Include your research questions, specific field of study, and any source preferences for an even more tailored review.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Click "Generate" and Receive Your Literature Review</span>
+            <p>In just seconds, you'll get a complete, logically organized review that includes key themes, theoretical frameworks, methodological trends, and research gaps.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Quality Literature Reviews Are Essential</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Establish Scholarly Authority</h3>
+            <p>A strong literature review showcases your deep understanding of the field and your ability to synthesize existing knowledge.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Build the Foundation for Original Research</h3>
+            <p>Identify gaps in existing research and clearly justify the need for your own study or project.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Position Your Research in the Academic Conversation</h3>
+            <p>Cite key studies, theories, and methods to demonstrate how your work contributes to and builds upon established scholarship.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Save Time and Improve Academic Success</h3>
+            <p>Instead of spending weeks compiling sources and notes, generate a structured foundation that you can refine and expand with ease.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Who Should Use the AI Literature Review Generator?</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">Graduate Students:</span> Save significant time when preparing dissertations, theses, and capstone projects.</li>
+          <li class="text-lg"><span class="font-semibold">Academic Researchers:</span> Quickly develop literature sections for grant proposals and research projects.</li>
+          <li class="text-lg"><span class="font-semibold">Undergraduate Students:</span> Create professional-quality literature reviews for research papers and essays.</li>
+          <li class="text-lg"><span class="font-semibold">Journal Article Authors:</span> Build comprehensive, polished backgrounds for article submissions.</li>
+          <li class="text-lg"><span class="font-semibold">Academic Advisors and Professors:</span> Help students organize and synthesize literature more efficiently.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Tips for Getting the Best Results with the AI Literature Review Generator</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Best Practice</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Why It Matters</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Be specific about your topic</td>
+                <td class="py-3 px-4 text-gray-700">Narrow topics yield more focused, relevant literature reviews.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Include key research questions</td>
+                <td class="py-3 px-4 text-gray-700">Guides the AI to prioritize the most relevant studies and theories.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Review and verify citations</td>
+                <td class="py-3 px-4 text-gray-700">Always double-check references and sources for academic accuracy.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Customize and expand</td>
+                <td class="py-3 px-4 text-gray-700">Use the generated review as a foundation, adding your own analysis and citations for maximum quality.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the AI Literature Review Generator free to use?</h3>
+            <p>Yes! Our tool is completely free with unlimited usage—no subscriptions, paywalls, or hidden fees.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How accurate are the citations and references?</h3>
+            <p>The AI provides plausible APA-style citations, but we recommend verifying and updating references using credible academic databases.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use the tool for my dissertation or thesis?</h3>
+            <p>Absolutely. The AI Literature Review Generator is designed to assist with large-scale academic projects, saving you valuable research and writing time.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will my professor know I used an AI tool?</h3>
+            <p>If you adapt and personalize the generated content with your own analysis and verified sources, your final review will reflect your unique voice and academic integrity.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How up-to-date is the reviewed literature?</h3>
+            <p>The AI generates content based on general knowledge rather than real-time academic databases. For cutting-edge research, supplement the generated review with updated sources.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I generate literature reviews in different citation styles?</h3>
+            <p>The tool defaults to APA format, but you can easily convert the citations to MLA, Chicago, or Harvard styles using reference management tools or manual editing.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choose aiFreeForever's AI Literature Review Generator?</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever (2025)</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Paid Alternatives</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">100% Free</td>
+                <td class="py-3 px-4 text-gray-700">$15–$50/month</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Word/Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited by credits or tokens</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o (Latest Version)</td>
+                <td class="py-3 px-4 text-gray-700">Often older, less capable models</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Academic Focus</td>
+                <td class="py-3 px-4 text-gray-700">Specifically designed for academic writing</td>
+                <td class="py-3 px-4 text-gray-700">General-purpose AI, limited academic support</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Ease of Use</td>
+                <td class="py-3 px-4 text-gray-700">Simple, intuitive</td>
+                <td class="py-3 px-4 text-gray-700">Can be complex with steep learning curves</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="text-lg mb-8">Crafting a strong, comprehensive literature review is essential for academic success—and now it's easier than ever. With the AI Literature Review Generator, you can instantly organize, synthesize, and structure key research findings into a polished academic review, saving countless hours and elevating your work.</p>
+        
+        <div class="bg-yellow-50 p-6 rounded-xl text-center mb-8">
+          <p class="text-lg font-semibold">👉 Start using the AI Literature Review Generator today and take your academic writing to the next level—faster, smarter, and completely free!</p>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="literature-review" category="student" client:load />
+  </main>
+</Layout>

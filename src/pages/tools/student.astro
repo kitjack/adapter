@@ -1,0 +1,338 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const studentTools = [
+  {
+    name: "Essay Outline Generator",
+    description: "Create structured essay outlines with customizable sections and detailed points. Generate comprehensive outlines for any topic.",
+    icon: "essay",
+    color: "amber",
+    href: "/tools/essay-outline"
+  },
+  {
+    name: "Math Answer Generator",
+    description: "Get step-by-step solutions for math problems. Understand the process and learn as you solve.",
+    icon: "math",
+    color: "green",
+    href: "/tools/math-answer"
+  },
+  {
+    name: "Study Notes Generator",
+    description: "Transform complex topics into clear, organized study notes. Generate comprehensive summaries and key points for better learning.",
+    icon: "notes",
+    color: "purple",
+    href: "/tools/study-notes"
+  },
+  {
+    name: "APA Reference Generator",
+    description: "Generate accurate APA style references for any source. Create properly formatted citations with ease.",
+    icon: "citation",
+    color: "emerald",
+    href: "/tools/apa-reference"
+  },
+  {
+    name: "Project Topic Generator",
+    description: "Generate unique and innovative project ideas for any field. Get detailed project topics with scope and objectives.",
+    icon: "project",
+    color: "teal",
+    href: "/tools/project-topic"
+  },
+  {
+    name: "Literature Review Generator",
+    description: "Create comprehensive literature reviews with proper citations and analysis. Generate structured academic reviews.",
+    icon: "literature",
+    color: "yellow",
+    href: "/tools/literature-review"
+  },
+  {
+    name: "Research Methodology Generator",
+    description: "Create comprehensive research methodologies for your academic projects. Generate detailed research designs and methods.",
+    icon: "research",
+    color: "violet",
+    href: "/tools/research-methodology"
+  },
+  {
+    name: "Scholarship Letter Generator",
+    description: "Create compelling scholarship application letters that showcase your achievements and aspirations. Generate personalized letters for any scholarship.",
+    icon: "scholarship",
+    color: "indigo",
+    href: "/tools/scholarship-letter"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "The Essay Outline Generator saved my semester. I was struggling with structuring my papers, but now I can create perfect outlines in minutes that my professor loves.",
+    author: "Taylor Smith",
+    role: "Undergraduate Student"
+  },
+  {
+    quote: "As a math tutor, I recommend the Math Answer Generator to all my students. It doesn't just give answers—it explains the process so they actually learn.",
+    author: "Dr. James Wilson",
+    role: "Mathematics Professor"
+  },
+  {
+    quote: "The Study Notes Generator has completely changed how I prepare for exams. It transforms complex lecture material into clear, organized notes that make studying so much easier.",
+    author: "Sophia Chen",
+    role: "Graduate Student"
+  }
+];
+
+const faqs = [
+  {
+    question: "Are these student tools really free?",
+    answer: "Yes! All our AI student tools are completely free to use with no word limits, no registration required, and no hidden fees."
+  },
+  {
+    question: "Is it ethical to use AI tools for academic work?",
+    answer: "Our tools are designed to help you learn and improve your academic skills, not replace your own thinking. They're best used as learning aids and starting points that you can build upon with your own knowledge and insights."
+  },
+  {
+    question: "Will my professor know I used an AI tool?",
+    answer: "Our tools generate unique content that serves as a foundation. We recommend using the output as a starting point and adding your own voice, insights, and research to create truly original work."
+  },
+  {
+    question: "How accurate are the math solutions and citations?",
+    answer: "Our Math Answer Generator provides step-by-step solutions with high accuracy. For citations, we follow the latest style guidelines, but we recommend double-checking against your institution's specific requirements."
+  },
+  {
+    question: "Can I use these tools for different academic levels?",
+    answer: "Absolutely! Our tools adapt to various academic levels from high school to graduate studies. Simply specify your level when generating content."
+  },
+  {
+    question: "How do I get the best results?",
+    answer: "Provide specific details about your assignment, topic, and requirements. The more information you give, the more tailored your results will be."
+  }
+];
+---
+
+<Layout title="Student AI Tools - Free Academic Assistants - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    {/* Hero Section */}
+    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Free AI Student Tools
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Boost your academic performance with our powerful AI student tools. Generate essays, solve math problems, create study notes, and more—all completely free.
+      </p>
+    </div>
+
+    {/* Tools Grid */}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      {studentTools.map(tool => (
+        <a href={tool.href} class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition group">
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class={`w-12 h-12 rounded-xl bg-${tool.color}-50 flex items-center justify-center text-${tool.color}-500 group-hover:bg-${tool.color}-100 transition`}>
+                {tool.icon === 'essay' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                )}
+                {tool.icon === 'math' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {tool.icon === 'notes' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                )}
+                {tool.icon === 'citation' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                  </svg>
+                )}
+                {tool.icon === 'project' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                )}
+                {tool.icon === 'literature' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                )}
+                {tool.icon === 'research' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                )}
+                {tool.icon === 'scholarship' && (
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+              </div>
+              <h2 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition">{tool.name}</h2>
+            </div>
+            <p class="text-gray-600 mb-4">{tool.description}</p>
+            <div class="flex justify-end">
+              <span class="text-sm font-medium text-indigo-500 group-hover:text-indigo-600 transition flex items-center gap-1">
+                Try it now
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    {/* Benefits Section */}
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Why Use Our Student AI Tools?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-500 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Save Time on Assignments</h3>
+          <p class="text-gray-600">Focus on understanding concepts instead of struggling with formatting, structure, or problem-solving mechanics.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-500 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Improve Your Learning</h3>
+          <p class="text-gray-600">Our tools don't just provide answers—they explain concepts and methodologies to enhance your understanding.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md">
+          <div class="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-500 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Academic Excellence</h3>
+          <p class="text-gray-600">Produce higher-quality academic work that meets university standards and impresses professors.</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Academic Success Section */}
+    <div class="mb-16 bg-white p-8 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">How Our AI Tools Support Academic Success</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Better Organization and Structure</h3>
+          <p class="text-gray-600 mb-6">Our tools help you organize your thoughts and create well-structured academic work, from essays to research papers.</p>
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Enhanced Understanding</h3>
+          <p class="text-gray-600 mb-6">Step-by-step explanations in our Math Answer Generator and detailed outlines help you grasp complex concepts more easily.</p>
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Time Management</h3>
+          <p class="text-gray-600">Reduce time spent on formatting and structuring, allowing you to focus on research, critical thinking, and deeper learning.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Proper Citation and References</h3>
+          <p class="text-gray-600 mb-6">Our APA Reference Generator ensures you correctly cite sources, avoiding plagiarism and meeting academic integrity standards.</p>
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Research Support</h3>
+          <p class="text-gray-600 mb-6">Generate comprehensive literature reviews and research methodologies that follow academic best practices.</p>
+          
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Scholarship Opportunities</h3>
+          <p class="text-gray-600">Create compelling scholarship application letters that highlight your achievements and increase your chances of receiving financial aid.</p>
+        </div>
+      </div>
+    </div>
+
+    {/* Testimonials */}
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">What Our Users Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {testimonials.map(testimonial => (
+          <div class="bg-white p-6 rounded-2xl shadow-md">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
+            <div>
+              <p class="font-semibold text-gray-900">{testimonial.author}</p>
+              <p class="text-sm text-gray-500">{testimonial.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* How It Works */}
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">How Our Student AI Tools Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 mx-auto mb-4">
+            <span class="text-xl font-bold">1</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Choose Your Tool</h3>
+          <p class="text-gray-600">Select the specific academic tool that matches your needs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 mx-auto mb-4">
+            <span class="text-xl font-bold">2</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Enter Your Details</h3>
+          <p class="text-gray-600">Provide information about your assignment, problem, or topic.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 mx-auto mb-4">
+            <span class="text-xl font-bold">3</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Customize Options</h3>
+          <p class="text-gray-600">Select academic level, format, and other preferences.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-500 mx-auto mb-4">
+            <span class="text-xl font-bold">4</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Generate & Learn</h3>
+          <p class="text-gray-600">Get instant results that help you learn and complete assignments.</p>
+        </div>
+      </div>
+    </div>
+
+    {/* FAQ Section */}
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        {faqs.map(faq => (
+          <div class="bg-white p-6 rounded-2xl shadow-md">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{faq.question}</h3>
+            <p class="text-gray-600">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* CTA Section */}
+    <div class="bg-indigo-50 p-8 rounded-2xl text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Excel in Your Studies?</h2>
+      <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Start using our free AI student tools today to improve your academic performance, save time, and reduce stress. No registration, no credit card, no limits.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        {studentTools.slice(0, 4).map(tool => (
+          <a 
+            href={tool.href} 
+            class="px-6 py-3 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition shadow-md"
+          >
+            Try {tool.name}
+          </a>
+        ))}
+      </div>
+      <div class="mt-4">
+        <a href="/tools" class="text-indigo-600 hover:text-indigo-700 font-medium">
+          View all student tools →
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>

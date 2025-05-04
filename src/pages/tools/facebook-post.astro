@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FacebookPostGenerator from '../../components/FacebookPostGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="Facebook Post Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-facebook/10 to-facebook/5 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Facebook Post Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Create engaging Facebook posts that drive engagement and spark conversations. Generate multiple variations with different tones and styles.
+      </p>
+    </div>
+    <FacebookPostGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Instantly Create Scroll-Stopping Posts for Free</h2>
+        <p class="text-lg mb-6">Need fresh, engaging content for Facebook? Our Facebook Post Generator helps you craft attention-grabbing posts that drive likes, comments, and shares—without the stress of writing from scratch.</p>
+        
+        <p class="text-lg mb-8">Powered by the latest GPT-4o technology, our Facebook Post Generator delivers professional-quality content that's completely free to use. No word limits. No subscription fees. No logins required. Just powerful posts ready to elevate your Facebook presence in seconds.</p>
+        
+        <p class="text-lg mb-8">Whether you're promoting a product, sharing company updates, posting personal achievements, or managing a business page, our tool adapts to your needs and your audience.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Use the Facebook Post Generator in 4 Easy Steps</h2>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Describe Your Post Topic</span>
+            <p>Input a brief description of what you want to share—such as an event, promotion, news, or personal milestone. The more detailed you are, the more tailored your generated post will be.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Customize Your Audience and Style</span>
+            <p>Select your target audience, preferred tone (casual, professional, motivational, etc.), post length (short, medium, or long), and whether you'd like emojis included.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Generate Your Post</span>
+            <p>Hit "Generate," and in seconds, you'll have a compelling, customized Facebook post ready to review and tweak.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Copy, Personalize, and Share</span>
+            <p>Review your generated post, add any final touches if desired, and then paste it directly into Facebook—ready to spark engagement.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Great Facebook Posts Are Essential for Growth</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Boost Organic Reach</h3>
+            <p>High-quality posts that drive engagement (likes, comments, shares) get prioritized by Facebook's algorithm, amplifying your reach—without having to pay for ads.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Build Stronger Community Connections</h3>
+            <p>Engaging posts foster genuine conversations and transform casual followers into a loyal, active community.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Drive Website Traffic and Conversions</h3>
+            <p>Strategically crafted posts can guide users toward your products, services, landing pages, or promotions.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Stay Consistent and Relevant</h3>
+            <p>Consistency is key on Facebook. Our Facebook Post Generator makes it easy to maintain an active, professional presence without burning out.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Who Should Use the Facebook Post Generator?</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">Small Business Owners:</span> Compete with larger brands by consistently publishing polished, professional posts.</li>
+          <li class="text-lg"><span class="font-semibold">Social Media Managers:</span> Quickly generate multiple post options for different campaigns and client accounts.</li>
+          <li class="text-lg"><span class="font-semibold">Content Creators:</span> Craft engaging captions that complement your visual content and maximize impact.</li>
+          <li class="text-lg"><span class="font-semibold">Community Managers:</span> Create conversation starters that drive activity and build group engagement.</li>
+          <li class="text-lg"><span class="font-semibold">Entrepreneurs and Solopreneurs:</span> Maintain a strong brand voice and consistent posting schedule with ease.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Tips for Optimizing Your Facebook Posts</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Common Issue</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Solution</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Post feels too promotional</td>
+                <td class="py-3 px-4 text-gray-700">Select a more conversational tone and focus on delivering value to readers rather than overt selling.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Content feels too generic</td>
+                <td class="py-3 px-4 text-gray-700">Provide more detailed context, such as specific events, products, or outcomes.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Lacks engagement hooks</td>
+                <td class="py-3 px-4 text-gray-700">Request the addition of questions, CTAs (calls-to-action), or prompts to spark user interaction.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the Facebook Post Generator really free?</h3>
+            <p>Yes! You can generate unlimited posts with no hidden costs or subscription fees.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How many Facebook posts can I create?</h3>
+            <p>Unlimited. Generate as many posts as you need, whenever you need them.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use this tool for Facebook Business Pages?</h3>
+            <p>Absolutely. The generated posts work seamlessly for personal profiles, business pages, and Facebook groups.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will posts include hashtags?</h3>
+            <p>When appropriate, yes. While hashtags aren't as crucial on Facebook compared to Instagram or Twitter, strategic use can still enhance discoverability.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I edit the generated posts?</h3>
+            <p>Definitely. We encourage users to add personal touches to ensure the post perfectly matches your voice and goals.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">What's the ideal Facebook post length?</h3>
+            <p>Typically, 80–250 words works best. Our Facebook Post Generator lets you choose from short, medium, or long formats based on your objective.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is my data safe?</h3>
+            <p>Completely. We do not store your input or generated posts after your session ends, ensuring your content ideas remain private.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choose aiFreeForever's Facebook Post Generator?</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever (2025)</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Hootsuite</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Buffer</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">SocialBee</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">Always Free</td>
+                <td class="py-3 px-4 text-gray-700">$99–$739/month</td>
+                <td class="py-3 px-4 text-gray-700">$15–$100/month</td>
+                <td class="py-3 px-4 text-gray-700">$29–$99/month</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited by subscription</td>
+                <td class="py-3 px-4 text-gray-700">Limited by subscription</td>
+                <td class="py-3 px-4 text-gray-700">Limited by subscription</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o (Latest)</td>
+                <td class="py-3 px-4 text-gray-700">Custom AI (Older Models)</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI (Older Models)</td>
+                <td class="py-3 px-4 text-gray-700">Limited AI</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Account Required</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Custom Audience Targeting</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Emoji and CTA Options</td>
+                <td class="py-3 px-4 text-gray-700">Fully Supported</td>
+                <td class="py-3 px-4 text-gray-700">Basic</td>
+                <td class="py-3 px-4 text-gray-700">Basic</td>
+                <td class="py-3 px-4 text-gray-700">Basic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="facebook-post" category="social-media" client:load />
+  </main>
+</Layout>

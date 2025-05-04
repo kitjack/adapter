@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectTopicGenerator from '../../components/ProjectTopicGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="AI Project Topic Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-teal-50 to-teal-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        AI Project Topic Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Generate unique and innovative project ideas for any field. Get detailed project topics with scope and objectives.
+      </p>
+    </div>
+    <ProjectTopicGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Instantly Discover Compelling Project Ideas</h2>
+        <p class="text-lg mb-6">Choosing the right project topic can define your academic journey. Our Project Topic Generator helps you instantly generate innovative, tailored project ideas across every field of study—saving you hours of brainstorming.</p>
+        
+        <p class="text-lg mb-8">Powered by the advanced GPT-4o AI model, the Project Topic Generator delivers multiple fully-developed project concepts customized to your academic level, interests, and available resources. Best of all, it's completely free—no subscriptions, no usage limits, and no hidden fees.</p>
+        
+        <p class="text-lg mb-8">Whether you're a high school student, undergraduate, graduate student, PhD candidate, or academic advisor, our tool helps you quickly find meaningful project ideas that align with your goals and spark real excitement.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Use the Project Topic Generator</h2>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Enter Your Academic Details</span>
+            <p>Provide your field of study, academic level, and the type of project (e.g., research paper, thesis, capstone).</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Add Optional Context</span>
+            <p>For even more personalized results, include your timeframe, resources (e.g., lab access, datasets), and specific areas of interest.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Generate Your Project Topics</span>
+            <p>Click "Generate" and receive several customized project ideas complete with research questions, potential methodologies, and expected outcomes.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Review and Choose Your Favorite</span>
+            <p>Each generated topic includes detailed suggestions to help you select the project that best matches your passion and capabilities.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choosing the Right Project Topic Matters</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Boosts Academic Success</h3>
+            <p>A well-chosen topic makes the entire research and writing process smoother, more enjoyable, and can directly improve your final grades.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Enhances Career Opportunities</h3>
+            <p>Strong academic projects become impressive portfolio pieces that showcase your skills to potential employers or graduate programs.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Increases Motivation and Engagement</h3>
+            <p>When you're genuinely interested in your topic, your research and writing naturally become more inspired and effective.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Makes a Real Contribution</h3>
+            <p>Choosing the right topic positions your project to meaningfully contribute to your field, building credibility and impact.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Who Should Use the Project Topic Generator?</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">High School Students:</span> Find manageable yet challenging project topics for science fairs, research papers, or special assignments.</li>
+          <li class="text-lg"><span class="font-semibold">Undergraduates:</span> Discover original ideas for essays, final projects, or capstone presentations.</li>
+          <li class="text-lg"><span class="font-semibold">Graduate Students:</span> Generate thesis topics that balance innovation with academic rigor.</li>
+          <li class="text-lg"><span class="font-semibold">PhD Candidates:</span> Explore dissertation ideas with appropriate scope, depth, and significance.</li>
+          <li class="text-lg"><span class="font-semibold">Professors and Researchers:</span> Identify new project angles for research grants, journal submissions, or collaborations.</li>
+          <li class="text-lg"><span class="font-semibold">Academic Advisors:</span> Help students find topics that match their academic level and personal interests quickly.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Tips for Getting the Best Results with the Project Topic Generator</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Best Practice</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Why It Matters</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Be specific about your field</td>
+                <td class="py-3 px-4 text-gray-700">More precise fields like "Marine Microbiology" or "Behavioral Economics" yield better-targeted topics.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Include your resources</td>
+                <td class="py-3 px-4 text-gray-700">Mention available equipment, labs, or databases to receive feasible, realistic project ideas.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">List multiple interest areas</td>
+                <td class="py-3 px-4 text-gray-700">Combining different interests can lead to innovative, cross-disciplinary project topics.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the Project Topic Generator free to use?</h3>
+            <p>Yes! Our Project Topic Generator is completely free, with unlimited access and no hidden charges.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How many project ideas can I generate?</h3>
+            <p>You can generate as many project ideas as you want—perfect for exploring different directions before committing to a final topic.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use these project ideas for real academic work?</h3>
+            <p>Absolutely. The generated ideas are designed to be practical for real-world academic assignments, research projects, or dissertations. Always verify feasibility with your advisor if needed.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will I get the same project ideas as others?</h3>
+            <p>No. The generator personalizes each output based on your unique academic field, level, and optional details.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How does the AI adjust based on my academic level?</h3>
+            <p>The AI tailors the complexity, depth, and research methods suggested based on whether you're a high school student, undergraduate, graduate student, or PhD candidate.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is my data private and secure?</h3>
+            <p>Yes. We do not store your input or your generated project topics after your session ends, keeping your ideas safe and private.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choose aiFreeForever's Project Topic Generator?</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever (2025)</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Chegg</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Course Hero</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">ProQuest</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">Always Free</td>
+                <td class="py-3 px-4 text-gray-700">$14.95–$19.95/month</td>
+                <td class="py-3 px-4 text-gray-700">$9.95–$39.95/month</td>
+                <td class="py-3 px-4 text-gray-700">$99+/year</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model Quality</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o (Latest)</td>
+                <td class="py-3 px-4 text-gray-700">Custom AI</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI</td>
+                <td class="py-3 px-4 text-gray-700">Database only</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Account Required</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Additional Resources</td>
+                <td class="py-3 px-4 text-gray-700">Full topic details, methodologies, and outcomes</td>
+                <td class="py-3 px-4 text-gray-700">Q&A support</td>
+                <td class="py-3 px-4 text-gray-700">Document libraries</td>
+                <td class="py-3 px-4 text-gray-700">Research archives</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="text-lg mb-8">Finding the right project topic no longer has to be stressful or time-consuming. With the Project Topic Generator, you can instantly discover compelling, customized project ideas that fuel your academic success—and do it all for free.</p>
+        
+        <div class="bg-teal-50 p-6 rounded-xl text-center mb-8">
+          <p class="text-lg font-semibold">👉 Start using the Project Topic Generator today and unlock your next great academic achievement!</p>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="project-topic" category="student" client:load />
+  </main>
+</Layout>

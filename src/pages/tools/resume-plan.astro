@@ -1,0 +1,207 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ResumePlanGenerator from '../../components/ResumePlanGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="AI Resume Plan Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-pink-50 to-pink-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        AI Resume Plan Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Create a structured plan for your resume. Get section-by-section guidance and content suggestions.
+      </p>
+    </div>
+    <ResumePlanGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Transform Your Job Hunt with Our Resume Plan Generator – No Cost, No Limits</h2>
+        <p class="text-lg mb-6">Take your job search to the next level with our Resume Plan Generator. This free tool builds a comprehensive blueprint for your perfect resume, specifically tailored to your industry, experience level, and target role. Say goodbye to resume guesswork—get a clear, strategic plan to highlight your qualifications effectively and land more interviews.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Use Our Resume Plan Generator?</h2>
+        <p class="text-lg mb-4">Powered by GPT-4o, our Resume Plan Generator is completely free, with no word limits, subscription fees, or hidden costs. Create unlimited resume plans for various industries, roles, and career paths without restrictions.</p>
+        
+        <p class="text-lg mb-4">Each resume plan includes:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li class="text-lg">Recommended sections tailored to your target job</li>
+          <li class="text-lg">Key achievements and skills to emphasize</li>
+          <li class="text-lg">Formatting suggestions for maximum impact</li>
+          <li class="text-lg">ATS (Applicant Tracking System) optimization tips</li>
+          <li class="text-lg">Everything you need to create a resume that stands out in today's competitive job market</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Create Your Perfect Resume Plan in Minutes</h2>
+        <p class="text-lg mb-4">Using the Resume Plan Generator is simple and fast:</p>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Enter Your Job Target Details</span>
+            <p>Specify your target job title and industry to ensure your resume plan is focused and relevant.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Share Your Experience and Skills</span>
+            <p>Outline your professional background and highlight key competencies for a more personalized resume plan.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Add Optional Personalization</span>
+            <p>Provide role level (entry-level, mid-career, executive) and education details to tailor your resume plan even further.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Generate and Implement Your Resume Plan</span>
+            <p>Click generate and receive a strategic, customized blueprint you can immediately put into action.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Strategic Resume Planning Leads to More Interviews</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Stand Out Instantly</h3>
+            <p>A strategically crafted resume, built from your Resume Plan Generator output, places your most impactful achievements front and center—essential for catching a recruiter's eye in under 7 seconds.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Beat the ATS Filters</h3>
+            <p>Our Resume Plan Generator ensures your resume is optimized with relevant keywords and formatting tips to sail through ATS screenings.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Craft a Compelling Career Story</h3>
+            <p>Move beyond listing duties. With our plan, your resume will narrate a powerful story of your career achievements and professional growth.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Customize for Every Application</h3>
+            <p>Need a new angle for a different job? Simply run the Resume Plan Generator again and receive a fresh plan tailored to the new opportunity.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Perfect for Every Stage of Your Career</h2>
+        <p class="text-lg mb-4">Our Resume Plan Generator is versatile and supports job seekers across all stages:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">Recent Graduates:</span> Emphasize education, internships, and transferable skills.</li>
+          <li class="text-lg"><span class="font-semibold">Career Changers:</span> Reframe your experience to align with new industry expectations.</li>
+          <li class="text-lg"><span class="font-semibold">Mid-Career Professionals:</span> Focus on your most impactful achievements.</li>
+          <li class="text-lg"><span class="font-semibold">Executives:</span> Strategically highlight leadership, vision, and key accomplishments.</li>
+          <li class="text-lg"><span class="font-semibold">Returning to Work:</span> Address employment gaps with strength and confidence.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Troubleshooting: Getting the Best Results with the Resume Plan Generator</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Issue</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Solution</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Plan is too generic?</td>
+                <td class="py-3 px-4 text-gray-700">Provide more specific job titles, industries, and accomplishments.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Skills recommendations don't match?</td>
+                <td class="py-3 px-4 text-gray-700">Include the exact job description you're targeting for sharper, role-specific advice.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Missing industry-specific advice?</td>
+                <td class="py-3 px-4 text-gray-700">Specify niche industries (e.g., "Healthcare IT" instead of just "Technology").</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions About the Resume Plan Generator</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the Resume Plan Generator really free?</h3>
+            <p>Yes—forever free. No subscriptions, no hidden charges, unlimited use.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will it write my resume for me?</h3>
+            <p>It creates a detailed strategic plan, helping you structure and build your resume efficiently.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I generate multiple plans?</h3>
+            <p>Absolutely! Tailor different resume plans for different job applications effortlessly.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Does it help with ATS optimization?</h3>
+            <p>Yes—your plan includes ATS-friendly recommendations for layout, keywords, and formatting.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can beginners use it too?</h3>
+            <p>Definitely. The tool is built for all levels, including entry-level and career transition scenarios.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Resume Plan Generator vs. Paid Resume Builders</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever Resume Plan Generator</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Novoresume</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Resume.io</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Zety</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">Always Free</td>
+                <td class="py-3 px-4 text-gray-700">$14.95-$29.99/month</td>
+                <td class="py-3 px-4 text-gray-700">$2.95-$9.95/month</td>
+                <td class="py-3 px-4 text-gray-700">$5.99-$23.99/month</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI</td>
+                <td class="py-3 px-4 text-gray-700">Limited AI</td>
+                <td class="py-3 px-4 text-gray-700">Custom AI</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Account Requirement</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Industry-Specific Guidance</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">Templates Only</td>
+                <td class="py-3 px-4 text-gray-700">Premium Only</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Start Your Career Transformation Today</h2>
+        <p class="text-lg mb-8">Ready to create a job-winning resume? Use the Resume Plan Generator now to get a tailored strategy for your next big opportunity — completely free, unlimited, and optimized for success.</p>
+        
+        <div class="bg-pink-50 p-6 rounded-xl text-center mb-8">
+          <p class="text-lg font-semibold">👉 Start using the Resume Plan Generator today and transform your job search with a strategic, professional resume!</p>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="resume-plan" category="career" client:load />
+  </main>
+</Layout>

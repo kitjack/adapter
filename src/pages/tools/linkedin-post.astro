@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LinkedInPostGenerator from '../../components/LinkedInPostGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="LinkedIn Post Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-blue-50 to-blue-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        LinkedIn Post Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Create professional and engaging LinkedIn posts that showcase your expertise and drive meaningful engagement.
+      </p>
+    </div>
+    <LinkedInPostGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Instantly Create Engaging LinkedIn Content for Free</h2>
+        <p class="text-lg mb-6">Struggling to craft posts that truly resonate on LinkedIn? With our LinkedIn Post Generator, you can create professional, high-impact LinkedIn posts in just seconds—no experience, no login, and no cost required.</p>
+        
+        <p class="text-lg mb-8">Powered by the latest GPT-4o AI technology, this tool helps you generate LinkedIn content that boosts your visibility, builds thought leadership, and drives meaningful engagement. Whether you're sharing industry insights, company milestones, personal achievements, or career tips, our LinkedIn Post Generator is your shortcut to standing out in busy feeds.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Use the LinkedIn Post Generator in 4 Simple Steps</h2>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Describe Your Post Idea</span>
+            <p>Enter details about the main message, event, topic, or story you want to share. The more context you give, the better the generated post will match your intent.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Choose Your Post Style</span>
+            <p>Select from a variety of tones—professional, casual, motivational, or informative—to align the post with your brand voice and target audience.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Add Optional Customizations</span>
+            <p>You can specify a target audience, a desired call-to-action, or even fine-tune the focus for a more tailored LinkedIn post.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Generate, Personalize, and Share</span>
+            <p>Click "Generate," review your ready-to-publish LinkedIn post, personalize it if desired, and copy it directly into LinkedIn. It's fast, effortless, and 100% free.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Great LinkedIn Posts Matter for Your Success</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Establish Authority</h3>
+            <p>Publishing valuable, thoughtful posts positions you as a trusted voice and thought leader in your industry.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Expand Your Reach</h3>
+            <p>Optimized, well-crafted posts amplify your brand's visibility, drawing more eyes to your profile and business page.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Build Authentic Connections</h3>
+            <p>Engaging content fosters stronger relationships with your network, leading to collaboration, partnerships, and new career opportunities.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Generate Business Leads and Job Offers</h3>
+            <p>Strategic LinkedIn content not only grows your personal brand but can also attract new clients, employers, and business opportunities.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Who Should Use the LinkedIn Post Generator?</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">Business Owners:</span> Share company news, product updates, and leadership insights.</li>
+          <li class="text-lg"><span class="font-semibold">Marketing Professionals:</span> Create captivating posts that drive leads and brand recognition.</li>
+          <li class="text-lg"><span class="font-semibold">Sales Teams:</span> Build trust and nurture prospects with personalized content.</li>
+          <li class="text-lg"><span class="font-semibold">HR Managers:</span> Highlight company culture and promote open roles effectively.</li>
+          <li class="text-lg"><span class="font-semibold">Job Seekers:</span> Share career achievements and professional advice to stand out to recruiters.</li>
+          <li class="text-lg"><span class="font-semibold">Professionals at Every Level:</span> Spark conversations, share experiences, and strengthen your network.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">LinkedIn Post Optimization Tips for Best Results</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Issue</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Solution</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Post feels too generic</td>
+                <td class="py-3 px-4 text-gray-700">Add more detailed context, emotions, or specific takeaways to your topic.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Post lacks personality</td>
+                <td class="py-3 px-4 text-gray-700">Try switching to a casual or motivational tone, and include personal insights.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Want more hashtags</td>
+                <td class="py-3 px-4 text-gray-700">Enable the "Include Hashtags" option to auto-generate relevant hashtags that match your topic.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the LinkedIn Post Generator really free?</h3>
+            <p>Yes! Our tool is entirely free to use—no hidden fees, subscriptions, or paywalls.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Do I need to create an account?</h3>
+            <p>No. You can use the LinkedIn Post Generator without registering or providing any personal information.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How many LinkedIn posts can I generate?</h3>
+            <p>There are no usage limits. Generate as many LinkedIn posts as you need, anytime you want.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I customize the generated posts?</h3>
+            <p>Definitely! We encourage users to tweak the AI-generated text to reflect their personal style and brand voice.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will the posts include hashtags?</h3>
+            <p>Yes, if you choose to enable the "Include Hashtags" option, each LinkedIn post will feature relevant, trending hashtags.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is it suitable for all types of LinkedIn content?</h3>
+            <p>Yes, whether you're posting articles, videos, images, or simple text updates, our LinkedIn Post Generator creates posts optimized for LinkedIn's algorithm.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is my data safe?</h3>
+            <p>Absolutely. We do not store your inputs or generated posts after your session ends. Your content remains private and secure.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choose aiFreeForever's LinkedIn Post Generator?</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever (2025)</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Hootsuite</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Buffer</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Sprout Social</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">Always Free</td>
+                <td class="py-3 px-4 text-gray-700">$49–$739/month</td>
+                <td class="py-3 px-4 text-gray-700">$6–$120/month</td>
+                <td class="py-3 px-4 text-gray-700">$249+/month</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o (Latest)</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI (Varies)</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI (Varies)</td>
+                <td class="py-3 px-4 text-gray-700">Custom AI (Expensive)</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Account Required</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Style/Tone Customization</td>
+                <td class="py-3 px-4 text-gray-700">Multiple styles available</td>
+                <td class="py-3 px-4 text-gray-700">Very limited</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+                <td class="py-3 px-4 text-gray-700">Moderate options</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Hashtag Generation</td>
+                <td class="py-3 px-4 text-gray-700">Included (smart matching)</td>
+                <td class="py-3 px-4 text-gray-700">Requires manual input</td>
+                <td class="py-3 px-4 text-gray-700">Requires manual input</td>
+                <td class="py-3 px-4 text-gray-700">Some automation</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Multilingual Support</td>
+                <td class="py-3 px-4 text-gray-700">Partial</td>
+                <td class="py-3 px-4 text-gray-700">Partial (paid tier)</td>
+                <td class="py-3 px-4 text-gray-700">Partial (paid tier)</td>
+                <td class="py-3 px-4 text-gray-700">Limited</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="linkedin-post" category="social-media" client:load />
+  </main>
+</Layout>

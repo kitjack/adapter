@@ -1,0 +1,205 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CoverLetterGenerator from '../../components/CoverLetterGenerator';
+import SimilarTools from '../../components/SimilarTools';
+---
+
+<Layout title="AI Cover Letter Generator - AI-Free-Forever">
+  <main class="container mx-auto px-4 py-12">
+    <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 py-16 mb-12 rounded-2xl text-center">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        AI Cover Letter Generator
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Create professional, tailored cover letters that highlight your qualifications and stand out to employers.
+      </p>
+    </div>
+    <CoverLetterGenerator client:load />
+    
+    <div class="max-w-4xl mx-auto mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Land Your Dream Job With the Perfect Cover Letter</h2>
+        <p class="text-lg mb-6">Ready to stand out from the crowd? Our AI Cover Letter Generator helps you instantly create personalized, professional cover letters tailored to specific roles and companies—giving you a powerful edge in today's competitive job market.</p>
+        
+        <p class="text-lg mb-8">Powered by GPT-4o, the AI Cover Letter Generator crafts compelling letters that highlight your skills, showcase your passion, and communicate why you're the perfect fit—all in minutes. Best of all, it's completely free—no subscriptions, no word limits, and no hidden fees.</p>
+        
+        <p class="text-lg mb-8">Whether you're a recent graduate, career changer, seasoned professional, or executive, our tool adapts to your unique career story and helps you craft cover letters that employers notice.</p>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">How to Create Your Cover Letter with the AI Cover Letter Generator</h2>
+        <ol class="list-decimal pl-6 space-y-4 mb-8">
+          <li class="text-lg">
+            <span class="font-semibold">Enter Job Details</span>
+            <p>Provide key information like the job title, company name, and any specific role details to tailor your letter accurately.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Add Your Skills and Experience</span>
+            <p>Highlight the qualifications, achievements, and experiences that make you an ideal candidate for the position.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Include Optional Additional Information</span>
+            <p>Share why you're interested in the company, specific projects you admire, or other personalized details.</p>
+          </li>
+          <li class="text-lg">
+            <span class="font-semibold">Generate and Customize Your Letter</span>
+            <p>Click "Generate," review your professionally structured cover letter, make any final tweaks, and use it for your application.</p>
+          </li>
+        </ol>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why a Great Cover Letter Makes All the Difference</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Stand Out from the Competition</h3>
+            <p>A well-crafted cover letter immediately grabs the hiring manager's attention and distinguishes you from other applicants.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Showcase Your Communication Skills</h3>
+            <p>Writing a clear, concise, and engaging cover letter shows you can communicate effectively—a vital skill in almost any role.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Tell Your Unique Career Story</h3>
+            <p>A resume lists facts; a cover letter adds context, explains transitions, highlights achievements, and showcases passion.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Demonstrate Genuine Interest</h3>
+            <p>Tailored letters prove that you're not just mass-applying but truly interested in that specific role and company.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Who Should Use the AI Cover Letter Generator?</h2>
+        <ul class="list-disc pl-6 space-y-2 mb-8">
+          <li class="text-lg"><span class="font-semibold">Recent Graduates:</span> Highlight relevant coursework, internships, and soft skills when experience is limited.</li>
+          <li class="text-lg"><span class="font-semibold">Career Changers:</span> Translate previous experiences into transferable skills aligned with a new industry.</li>
+          <li class="text-lg"><span class="font-semibold">Experienced Professionals:</span> Emphasize leadership, specialized expertise, and major accomplishments.</li>
+          <li class="text-lg"><span class="font-semibold">Executive Candidates:</span> Showcase strategic vision, leadership results, and organizational impact.</li>
+          <li class="text-lg"><span class="font-semibold">Remote Job Seekers:</span> Highlight communication, self-management skills, and remote work experience.</li>
+        </ul>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Tips for Getting the Best Results with the AI Cover Letter Generator</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Best Practice</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Why It Matters</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Be specific about skills and projects</td>
+                <td class="py-3 px-4 text-gray-700">Specific examples make your letter more credible and engaging.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Match your letter to job requirements</td>
+                <td class="py-3 px-4 text-gray-700">Align your experiences with keywords and expectations in the job description.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Keep it concise</td>
+                <td class="py-3 px-4 text-gray-700">Aim for 3–4 strong paragraphs—no more than one page—to maintain the reader's attention.</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Personalize before sending</td>
+                <td class="py-3 px-4 text-gray-700">Adding a few tailored sentences can make your letter even more powerful and authentic.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Frequently Asked Questions (FAQs)</h2>
+        <div class="space-y-6 mb-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is the AI Cover Letter Generator really free?</h3>
+            <p>Yes! You can generate unlimited cover letters without any fees, subscriptions, or credit card requirements.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">How many cover letters can I create?</h3>
+            <p>There's no limit. Generate as many unique cover letters as you need for different applications.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Can I edit the generated cover letter?</h3>
+            <p>Definitely. We encourage users to personalize their generated cover letters for the best impact.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Will my cover letter be original?</h3>
+            <p>Yes. Each letter is uniquely generated based on the specific job, company, and your individual qualifications.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Should I customize the letter after generating it?</h3>
+            <p>While the AI creates high-quality letters, adding personal touches and company-specific insights strengthens your application.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Is my data safe when using the tool?</h3>
+            <p>Absolutely. We don't store your inputs or any generated letters after your session ends, ensuring full privacy.</p>
+          </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">Why Choose aiFreeForever's AI Cover Letter Generator?</h2>
+        <div class="overflow-x-auto mb-8">
+          <table class="min-w-full bg-white rounded-xl overflow-hidden">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Feature</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">aiFreeForever (2025)</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Resume Genius</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Zety</th>
+                <th class="py-3 px-4 text-left text-gray-900 font-semibold">Novoresume</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Price</td>
+                <td class="py-3 px-4 text-gray-700">Always Free</td>
+                <td class="py-3 px-4 text-gray-700">$7.95–$24.95/month</td>
+                <td class="py-3 px-4 text-gray-700">$11.99–$39.99/month</td>
+                <td class="py-3 px-4 text-gray-700">$6.95–$15.99/month</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Usage Limits</td>
+                <td class="py-3 px-4 text-gray-700">Unlimited</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+                <td class="py-3 px-4 text-gray-700">Limited by plan</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">AI Model</td>
+                <td class="py-3 px-4 text-gray-700">GPT-4o (Latest)</td>
+                <td class="py-3 px-4 text-gray-700">Basic AI</td>
+                <td class="py-3 px-4 text-gray-700">Custom AI</td>
+                <td class="py-3 px-4 text-gray-700">Basic Templates</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Account Required</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4 text-gray-900">Credit Card Required</td>
+                <td class="py-3 px-4 text-gray-700">No</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+                <td class="py-3 px-4 text-gray-700">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <p class="text-lg mb-8">A tailored, impactful cover letter is your ticket to more interviews and better job offers. With the AI Cover Letter Generator, you can instantly create professional, persuasive letters that showcase your true potential—all for free.</p>
+        
+        <div class="bg-orange-50 p-6 rounded-xl text-center mb-8">
+          <p class="text-lg font-semibold">👉 Start using the AI Cover Letter Generator today and land the opportunities you deserve!</p>
+        </div>
+      </div>
+    </div>
+    
+    <SimilarTools currentToolPath="cover-letter" category="career" client:load />
+  </main>
+</Layout>
